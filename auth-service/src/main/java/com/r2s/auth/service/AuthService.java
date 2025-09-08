@@ -1,6 +1,7 @@
 package com.r2s.auth.service;
 
 import com.r2s.auth.dto.*;
+import com.r2s.auth.entity.Role;
 import com.r2s.auth.entity.User;
 import com.r2s.auth.repository.UserRepository;
 import com.r2s.auth.security.JwtUtil;
@@ -86,7 +87,7 @@ public class AuthService {
         User user = new User();
         user.setUsername(request.getUsername());
         user.setPassword(passwordEncoder.encode(request.getPassword())); // BCrypt
-        user.setRole("USER");
+        user.setRole(request.getRole() != null ? request.getRole() : Role.ROLE_USER);
         userRepo.save(user);
     }
 
