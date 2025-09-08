@@ -1,0 +1,13 @@
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\AuthServiceApplication.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\config\SecurityConfig.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\controller\AuthController.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\dto\AuthResponse.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\dto\LoginRequest.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\dto\RegisterRequest.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\entity\Role.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\entity\User.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\repository\UserRepository.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\security\CustomUserDetailsService.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\security\JwtFilter.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\security\JwtUtil.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\service\AuthService.java

@@ -1,0 +1,13 @@
+
+jwt:
+  secret: "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"  # >= 32 bytes
+  expiration: 36000000
+logging:
+  level:
+    org.springframework.security: TRACE
+    io.jsonwebtoken: DEBUG
+server:
+  port: 8081
+spring:
+  application:
+    name: auth-service
