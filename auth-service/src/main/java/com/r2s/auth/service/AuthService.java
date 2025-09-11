@@ -87,7 +87,7 @@ public class AuthService {
         User user = new User();
         user.setUsername(request.getUsername());
         user.setPassword(passwordEncoder.encode(request.getPassword())); // BCrypt
-        user.setRole(request.getRole() != null ? request.getRole() : Role.ROLE_USER);
+        user.setRole(request.getRole() != null ? request.getRole() : Role.USER);
         userRepo.save(user);
     }
 
