@@ -2,7 +2,9 @@ package com.r2s.auth.controller;
 
 import com.r2s.auth.dto.*;
 import com.r2s.auth.service.AuthService;
+import com.r2s.auth.dto.AuthResponse;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -21,5 +23,22 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
         return ResponseEntity.ok(authService.login(request));
+    }
+    @GetMapping("/user")
+    @PreAuthorize("hasRole('USER')")
+    public String user() {
+        return "Hello USER";
+    }
+
+    @GetMapping("/admin")
+    @PreAuthorize("hasRole('ADMIN')")
+    public String admin() {
+        return "Hello ADMIN";
+    }
+
+    @GetMapping("/mod")
+    @PreAuthorize("hasRole('MODERATOR')")
+    public String mod() {
+        return "Hello MODERATOR";
     }
 }

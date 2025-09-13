@@ -1,6 +1,7 @@
 C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\AuthServiceApplication.java
 C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\config\SecurityConfig.java
 C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\controller\AuthController.java
+C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\controller\RoleController.java
 C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\dto\AuthResponse.java
 C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\dto\LoginRequest.java
 C:\Users\thanh\OneDrive\Desktop\user-access-management\auth-service\src\main\java\com\r2s\auth\dto\RegisterRequest.java

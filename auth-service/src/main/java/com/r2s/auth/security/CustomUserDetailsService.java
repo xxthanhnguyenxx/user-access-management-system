@@ -9,9 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 
 @Service
-
 public class CustomUserDetailsService implements UserDetailsService {
-
     private final UserRepository userRepo;
 
     public CustomUserDetailsService(UserRepository userRepo) {
@@ -19,14 +17,15 @@ public class CustomUserDetailsService implements UserDetailsService {
     }
 
     @Override
- public UserDetails loadUserByUsername(String username) {
-         User user = userRepo.findByUsername(username)
-         .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    public UserDetails loadUserByUsername(String username) {
+        User user = userRepo.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-         return new org.springframework.security.core.userdetails.User(
-                 user.getUsername(),
-                 user.getPassword(),
-                 Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole()) )
-         );
-         }
+        // Spring Security cần ROLE_ prefix
+        return new org.springframework.security.core.userdetails.User(
+                user.getUsername(),
+                user.getPassword(),
+                Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()))
+        );
+    }
 }

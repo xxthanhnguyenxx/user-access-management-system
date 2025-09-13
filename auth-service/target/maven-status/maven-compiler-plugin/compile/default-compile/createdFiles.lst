@@ -10,3 +10,4 @@ com\r2s\auth\dto\RegisterRequest.class
 com\r2s\auth\security\JwtUtil.class
 com\r2s\auth\security\CustomUserDetailsService.class
 com\r2s\auth\dto\LoginRequest.class
+com\r2s\auth\controller\RoleController.class
