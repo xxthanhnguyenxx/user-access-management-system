@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "d752cf43-8561-4819-9133-24415085596f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45284129",
+		"_collection_link": "https://thanh-9681375.postman.co/workspace/1d70c43a-76c1-493e-82d1-7671483fb095/collection/45284129-d752cf43-8561-4819-9133-24415085596f?action=share&source=collection_link&creator=45284129"
+	},
+	"item": [
+		{
+			"name": "user-access-management",
+			"item": [
+				{
+					"name": "auth-service",
+					"item": [
+						{
+							"name": "http://localhost:8081/auth/register",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZTEiLCJpYXQiOjE3NTc2NDYxOTcsImV4cCI6MTc1NzY4MjE5N30.6ae41Xf31qHRlZrYrRgerkg3Z24y_h8ariIKEkAWnH0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"t11111\",\r\n    \"password\": \"111111\",\r\n    \"role\": \"ADMIN\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZTEyMzQiLCJpYXQiOjE3NTc2NDgyNTIsImV4cCI6MTc1NzY4NDI1Mn0._S1KSevYp8sBis26H4f134rAzjmb_xFCqVGriARnM0g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"t1\",\r\n    \"password\": \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{auth}}/auth/login",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth/admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0MSIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzU3NzMwNDA0LCJleHAiOjE3NTc3NjY0MDR9.eZa6JWucWRd6xI8_fazhCqbuN3VI3EGi1aTgGuccczs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/auth/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"auth",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth/user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0MSIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzU3NzMwNDA0LCJleHAiOjE3NTc3NjY0MDR9.eZa6JWucWRd6xI8_fazhCqbuN3VI3EGi1aTgGuccczs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/auth/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"auth",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user-service",
+					"item": [
+						{
+							"name": "get users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0IiwiaWF0IjoxNzU3NzI5ODIwLCJleHAiOjE3NTc3NjU4MjB9.DnnaU2xwdo9_ufAFEBJ5o8Oh1ZcjAr_5KU4PT8y_t34",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"alice1\",\r\n    \"password\": \"1234567\",\r\n    \r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8082/users/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"users",
+										"me"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
